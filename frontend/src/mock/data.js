@@ -33,7 +33,7 @@ export const tips = [
 export const contactInfo = {
   phone: "696049505",
   address: "Wrocław Oporów",
-  email: "wietrzyk.leon@gmail.com",
+  email: "cleanpodjazd.wroclaw@gmail.com",
   location: {
     lat: 51.1344,
     lng: 16.9186

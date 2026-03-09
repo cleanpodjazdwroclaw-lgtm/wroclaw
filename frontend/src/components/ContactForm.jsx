@@ -98,8 +98,8 @@ export const ContactForm = () => {
                   </div>
                   <div>
                     <div className="font-semibold text-gray-900 mb-1">Email</div>
-                    <a href="mailto:wietrzyk.leon@gmail.com" className="text-blue-900 hover:text-blue-700 break-all">
-                      wietrzyk.leon@gmail.com
+                    <a href="mailto:cleanpodjazd.wroclaw@gmail.com" className="text-blue-900 hover:text-blue-700 break-all">
+                      cleanpodjazd.wroclaw@gmail.com
                     </a>
                   </div>
                 </CardContent>

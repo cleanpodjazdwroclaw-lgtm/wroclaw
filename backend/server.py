@@ -20,7 +20,7 @@ db = client[os.environ['DB_NAME']]
 
 # Resend API setup
 resend.api_key = os.environ.get('RESEND_API_KEY', '')
-OWNER_EMAIL = "wietrzyk.leon@gmail.com"
+OWNER_EMAIL = "cleanpodjazd.wroclaw@gmail.com"
 SENDER_EMAIL = os.environ.get('SENDER_EMAIL', 'onboarding@resend.dev')
 
 # Create the main app without a prefix
