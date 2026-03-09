@@ -53,10 +53,10 @@ export const Services = () => {
         <div className="mt-16 text-center">
           <div className="bg-gray-50 rounded-2xl p-10 md:p-12 max-w-3xl mx-auto">
             <h3 className="text-2xl font-bold text-gray-900 mb-3">
-              Ceny do ustalenia
+              Wiosenna promocja
             </h3>
             <p className="text-lg text-gray-600 mb-6">
-              Zadzwoń i ustal szczegóły. Na wiosne robimy tanio!
+              Zadzwoń i ustal szczegóły!
             </p>
             <a href="tel:696049505">
               <button className="bg-green-500 hover:bg-green-600 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 hover:scale-105 shadow-lg">

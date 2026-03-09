@@ -4,8 +4,8 @@ import { Toaster } from "sonner";
 import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
 import { Services } from "./components/Services";
-import { Gallery } from "./components/Gallery";
 import { Tips } from "./components/Tips";
+import { MapSection } from "./components/MapSection";
 import { ContactForm } from "./components/ContactForm";
 import { Footer } from "./components/Footer";
 
@@ -15,8 +15,8 @@ const Home = () => {
       <Navbar />
       <Hero />
       <Services />
-      <Gallery />
       <Tips />
+      <MapSection />
       <ContactForm />
       <Footer />
     </>

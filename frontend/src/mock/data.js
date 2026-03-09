@@ -10,17 +10,8 @@ export const services = [
   {
     id: 2,
     title: "Mycie Podjazdów",
-    description: "Czyszczenie podjazdów z betonu i kostki. Szybko i skutecznie. Ceny do ustalenia, na wiosne robimy tanio.",
+    description: "Czyszczenie podjazdów z betonu i kostki. Szybko i skutecznie. Wiosenna promocja!",
     icon: "Droplets"
-  }
-];
-
-export const galleryImages = [
-  {
-    id: 1,
-    before: "https://images.pexels.com/photos/4131625/pexels-photo-4131625.jpeg",
-    after: "https://images.unsplash.com/photo-1681241942875-7a1ea65899b4",
-    title: "Kostka Brukowa - Przed i Po"
   }
 ];
 
@@ -34,17 +25,17 @@ export const tips = [
   {
     id: 2,
     title: "Jak Przygotować Powierzchnię?",
-    description: "Przed czyszczeniem usuń większe przedmioty z podjazdu. My przyjeżdżamy z własnym sprzętem i wodą jeśli potrzeba.",
+    description: "Przed czyszczeniem usuń większe przedmioty z podjazdu.",
     icon: "CheckCircle"
   }
 ];
 
 export const contactInfo = {
   phone: "696049505",
-  address: "Wrocław i okolice",
+  address: "Wrocław Oporów",
   email: "wietrzyk.leon@gmail.com",
   location: {
-    lat: 51.1079,
-    lng: 17.0385
+    lat: 51.1344,
+    lng: 16.9186
   }
 };

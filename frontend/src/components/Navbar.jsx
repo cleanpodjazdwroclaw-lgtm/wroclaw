@@ -39,8 +39,8 @@ export const Navbar = () => {
               <button onClick={() => scrollToSection('uslugi')} className="text-gray-700 hover:text-blue-900 font-medium transition-colors">
                 Usługi
               </button>
-              <button onClick={() => scrollToSection('galeria')} className="text-gray-700 hover:text-blue-900 font-medium transition-colors">
-                Galeria
+              <button onClick={() => scrollToSection('mapa')} className="text-gray-700 hover:text-blue-900 font-medium transition-colors">
+                Mapa
               </button>
               <button onClick={() => scrollToSection('kontakt')} className="text-gray-700 hover:text-blue-900 font-medium transition-colors">
                 Kontakt
@@ -73,8 +73,8 @@ export const Navbar = () => {
                 <button onClick={() => scrollToSection('uslugi')} className="text-left text-gray-700 hover:text-blue-900 font-medium py-2">
                   Usługi
                 </button>
-                <button onClick={() => scrollToSection('galeria')} className="text-left text-gray-700 hover:text-blue-900 font-medium py-2">
-                  Galeria
+                <button onClick={() => scrollToSection('mapa')} className="text-left text-gray-700 hover:text-blue-900 font-medium py-2">
+                  Mapa
                 </button>
                 <button onClick={() => scrollToSection('kontakt')} className="text-left text-gray-700 hover:text-blue-900 font-medium py-2">
                   Kontakt

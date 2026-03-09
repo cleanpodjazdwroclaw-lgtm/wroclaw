@@ -37,10 +37,10 @@ export const Footer = () => {
               </li>
               <li>
                 <button 
-                  onClick={() => scrollToSection('galeria')}
+                  onClick={() => scrollToSection('mapa')}
                   className="text-gray-300 hover:text-white transition-colors"
                 >
-                  Galeria
+                  Mapa
                 </button>
               </li>
               <li>

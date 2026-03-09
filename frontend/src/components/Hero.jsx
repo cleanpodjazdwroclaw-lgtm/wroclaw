@@ -66,7 +66,7 @@ export const Hero = () => {
           {/* Simple Info */}
           <div className="mt-16 pt-8 border-t border-white/20">
             <p className="text-lg text-gray-300">
-              Działamy głównie we Wrocławiu • Ceny do ustalenia • Na wiosne tanio
+              Działamy głównie we Wrocławiu • Wiosenna promocja
             </p>
           </div>
         </div>
