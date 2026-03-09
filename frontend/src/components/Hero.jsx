@@ -37,7 +37,10 @@ export const Hero = () => {
           </h1>
 
           {/* Subheading */}
-          <p className="text-xl md:text-2xl text-gray-200 mb-10 max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl text-gray-200 mb-4 max-w-3xl mx-auto">
+            Młody zespół świadczący profesjonalne usługi czyszczenia.
+          </p>
+          <p className="text-lg md:text-xl text-gray-300 mb-10 max-w-3xl mx-auto">
             Usuwamy brud, mech i zabrudzenia. Twoja kostka wróci do pierwotnego koloru.
           </p>
 

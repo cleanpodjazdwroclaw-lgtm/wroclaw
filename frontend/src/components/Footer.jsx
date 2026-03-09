@@ -19,7 +19,7 @@ export const Footer = () => {
           <div>
             <span className="text-xl font-bold mb-4 block">Wroclaw Cleaning</span>
             <p className="text-gray-300 leading-relaxed">
-              Czyszczenie kostki brukowej i podjazdów we Wrocławiu. Młody zespół świadczący profesjonalne usługi czyszczenia.
+              Czyszczenie kostki brukowej i podjazdów we Wrocławiu.
             </p>
           </div>
 
