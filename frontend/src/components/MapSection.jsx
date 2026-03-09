@@ -37,7 +37,7 @@ export const MapSection = () => {
                 <MapPin className="w-6 h-6 text-blue-900 flex-shrink-0 mt-1" />
                 <div>
                   <h4 className="font-bold text-gray-900 mb-2">Wrocław Oporów</h4>
-                  <p className="text-sm text-gray-600">Główny obszar działania i przyjazd bez dodatkowych opłat</p>
+                  <p className="text-sm text-gray-600">Nasza lokalizacja</p>
                 </div>
               </div>
             </div>
@@ -45,8 +45,8 @@ export const MapSection = () => {
               <div className="flex items-start gap-3">
                 <MapPin className="w-6 h-6 text-green-600 flex-shrink-0 mt-1" />
                 <div>
-                  <h4 className="font-bold text-gray-900 mb-2">Okolice Wrocławia</h4>
-                  <p className="text-sm text-gray-600">Obsługujemy również tereny wokół Wrocławia</p>
+                  <h4 className="font-bold text-gray-900 mb-2">Cały Wrocław</h4>
+                  <p className="text-sm text-gray-600">Obsługujemy cały Wrocław i okolice bez dodatkowych opłat</p>
                 </div>
               </div>
             </div>
