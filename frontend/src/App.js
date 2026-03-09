@@ -1,12 +1,11 @@
 import "@/App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Toaster } from "./components/ui/sonner";
+import { Toaster } from "sonner";
 import { Navbar } from "./components/Navbar";
 import { Hero } from "./components/Hero";
 import { Services } from "./components/Services";
 import { Gallery } from "./components/Gallery";
-import { WhyChooseUs } from "./components/WhyChooseUs";
-import { MapSection } from "./components/MapSection";
+import { Tips } from "./components/Tips";
 import { ContactForm } from "./components/ContactForm";
 import { Footer } from "./components/Footer";
 
@@ -17,8 +16,7 @@ const Home = () => {
       <Hero />
       <Services />
       <Gallery />
-      <WhyChooseUs />
-      <MapSection />
+      <Tips />
       <ContactForm />
       <Footer />
     </>

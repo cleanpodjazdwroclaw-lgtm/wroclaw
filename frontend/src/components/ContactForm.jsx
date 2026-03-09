@@ -4,11 +4,12 @@ import { Card, CardContent } from './ui/card';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
-import { useToast } from '../hooks/use-toast';
-import { mockFormSubmission } from '../mock/data';
+import { toast } from 'sonner';
+import axios from 'axios';
+
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
 
 export const ContactForm = () => {
-  const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -28,20 +29,17 @@ export const ContactForm = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await mockFormSubmission(formData);
+      const response = await axios.post(`${BACKEND_URL}/api/contact`, formData);
       
-      toast({
-        title: "Sukces!",
-        description: response.message,
+      toast.success('Wiadomość wysłana!', {
+        description: 'Odezwiemy się wkrótce.',
       });
 
-      // Reset form
       setFormData({ name: '', phone: '', message: '' });
     } catch (error) {
-      toast({
-        title: "Błąd",
-        description: "Coś poszło nie tak. Spróbuj ponownie.",
-        variant: "destructive"
+      console.error('Error submitting form:', error);
+      toast.error('Błąd', {
+        description: 'Spróbuj zadzwonić: 636 637 388',
       });
     } finally {
       setIsSubmitting(false);
@@ -49,22 +47,19 @@ export const ContactForm = () => {
   };
 
   return (
-    <section id="kontakt" className="py-20 bg-gradient-to-b from-gray-50 to-white">
+    <section id="kontakt" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 bg-green-100 rounded-full mb-4">
-            <span className="text-green-900 text-sm font-semibold">KONTAKT</span>
-          </div>
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Skontaktuj Się Z Nami
+            Kontakt
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Napisz lub zadzwoń - odpowiemy na wszystkie pytania i przygotujemy bezpłatną wycenę
+            Zadzwoń lub napisz - odezwiemy się szybko
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
           {/* Contact Information */}
           <div>
             <h3 className="text-2xl font-bold text-gray-900 mb-6">Dane Kontaktowe</h3>
@@ -77,10 +72,9 @@ export const ContactForm = () => {
                   </div>
                   <div>
                     <div className="font-semibold text-gray-900 mb-1">Telefon</div>
-                    <a href="tel:63663738899" className="text-blue-900 hover:text-blue-700 text-lg font-medium">
-                      636 637 388
+                    <a href="tel:696049505" className="text-blue-900 hover:text-blue-700 text-lg font-medium">
+                      696 049 505
                     </a>
-                    <p className="text-sm text-gray-600 mt-1">Pon-Pt: 8:00-18:00, Sob: 9:00-14:00</p>
                   </div>
                 </CardContent>
               </Card>
@@ -91,9 +85,8 @@ export const ContactForm = () => {
                     <MapPin className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <div className="font-semibold text-gray-900 mb-1">Adres</div>
-                    <p className="text-gray-700">Racławicka, Wrocław</p>
-                    <p className="text-sm text-gray-600 mt-1">Obsługujemy cały Wrocław i okolice</p>
+                    <div className="font-semibold text-gray-900 mb-1">Obszar</div>
+                    <p className="text-gray-700">Wrocław i okolice</p>
                   </div>
                 </CardContent>
               </Card>
@@ -105,25 +98,12 @@ export const ContactForm = () => {
                   </div>
                   <div>
                     <div className="font-semibold text-gray-900 mb-1">Email</div>
-                    <a href="mailto:kontakt@wroclawcleaning.pl" className="text-blue-900 hover:text-blue-700">
-                      kontakt@wroclawcleaning.pl
+                    <a href="mailto:wietrzyk.leon@gmail.com" className="text-blue-900 hover:text-blue-700 break-all">
+                      wietrzyk.leon@gmail.com
                     </a>
-                    <p className="text-sm text-gray-600 mt-1">Odpowiadamy w ciągu 24h</p>
                   </div>
                 </CardContent>
               </Card>
-            </div>
-
-            {/* Quick Call CTA */}
-            <div className="bg-gradient-to-r from-green-500 to-green-600 rounded-2xl p-8 text-white">
-              <h4 className="text-2xl font-bold mb-3">Potrzebujesz pilnej wyceny?</h4>
-              <p className="mb-6 text-green-50">Zadzwoń teraz i umów się na bezpłatne oględziny!</p>
-              <a href="tel:63663738899">
-                <Button size="lg" className="bg-white text-green-600 hover:bg-gray-100 w-full">
-                  <Phone className="w-5 h-5 mr-2" />
-                  Zadzwoń: 636 637 388
-                </Button>
-              </a>
             </div>
           </div>
 
@@ -131,7 +111,7 @@ export const ContactForm = () => {
           <div>
             <Card className="border-0 shadow-2xl">
               <CardContent className="p-8">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Formularz Kontaktowy</h3>
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">Napisz do Nas</h3>
                 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
@@ -175,7 +155,7 @@ export const ContactForm = () => {
                       name="message"
                       value={formData.message}
                       onChange={handleChange}
-                      placeholder="Opisz czego potrzebujesz..."
+                      placeholder="Opisz co trzeba posprzątać..."
                       rows={5}
                       className="resize-none"
                     />
@@ -199,10 +179,6 @@ export const ContactForm = () => {
                       </>
                     )}
                   </Button>
-
-                  <p className="text-sm text-gray-600 text-center">
-                    Odpowiadamy w ciągu 24 godzin w dni robocze
-                  </p>
                 </form>
               </CardContent>
             </Card>

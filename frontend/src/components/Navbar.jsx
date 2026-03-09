@@ -29,12 +29,9 @@ export const Navbar = () => {
       }`}>
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between">
-            {/* Logo */}
-            <div className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-900 to-blue-700 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-xl">WC</span>
-              </div>
-              <span className="text-xl font-bold text-blue-900">Wroclaw Cleaning</span>
+            {/* Logo - Only Text */}
+            <div className="flex items-center">
+              <span className="text-2xl font-bold text-blue-900">Wroclaw Cleaning</span>
             </div>
 
             {/* Desktop Navigation */}
@@ -45,9 +42,6 @@ export const Navbar = () => {
               <button onClick={() => scrollToSection('galeria')} className="text-gray-700 hover:text-blue-900 font-medium transition-colors">
                 Galeria
               </button>
-              <button onClick={() => scrollToSection('o-nas')} className="text-gray-700 hover:text-blue-900 font-medium transition-colors">
-                O Nas
-              </button>
               <button onClick={() => scrollToSection('kontakt')} className="text-gray-700 hover:text-blue-900 font-medium transition-colors">
                 Kontakt
               </button>
@@ -55,10 +49,10 @@ export const Navbar = () => {
 
             {/* Call Button */}
             <div className="hidden md:flex items-center space-x-3">
-              <a href="tel:63663738899">
+              <a href="tel:696049505">
                 <Button className="bg-green-500 hover:bg-green-600 text-white">
                   <Phone className="w-4 h-4 mr-2" />
-                  636 637 388
+                  696 049 505
                 </Button>
               </a>
             </div>
@@ -82,13 +76,10 @@ export const Navbar = () => {
                 <button onClick={() => scrollToSection('galeria')} className="text-left text-gray-700 hover:text-blue-900 font-medium py-2">
                   Galeria
                 </button>
-                <button onClick={() => scrollToSection('o-nas')} className="text-left text-gray-700 hover:text-blue-900 font-medium py-2">
-                  O Nas
-                </button>
                 <button onClick={() => scrollToSection('kontakt')} className="text-left text-gray-700 hover:text-blue-900 font-medium py-2">
                   Kontakt
                 </button>
-                <a href="tel:63663738899" className="pt-2">
+                <a href="tel:696049505" className="pt-2">
                   <Button className="w-full bg-green-500 hover:bg-green-600 text-white">
                     <Phone className="w-4 h-4 mr-2" />
                     Zadzwoń Teraz
@@ -101,7 +92,7 @@ export const Navbar = () => {
       </nav>
 
       {/* Floating Call Button - Mobile Only */}
-      <a href="tel:63663738899" className="md:hidden fixed bottom-6 right-6 z-50">
+      <a href="tel:696049505" className="md:hidden fixed bottom-6 right-6 z-50">
         <Button className="w-14 h-14 rounded-full bg-green-500 hover:bg-green-600 text-white shadow-2xl animate-pulse">
           <Phone className="w-6 h-6" />
         </Button>
